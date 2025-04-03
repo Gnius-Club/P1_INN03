@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller ODS - Sesión 3</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; }
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+         .banner .title, .banner .subtitle {
+            margin: 0;
+        }
+         .banner hr {
+            border: none;
+            border-top: 1px solid #e0e0e0; /* Light line for separation */
+            margin: 8px 0;
+        }
+         .banner .subtitle {
+            font-size: 0.9em;
+            color: #e0e0e0; /* Lighter color for subtitle */
+            font-weight: normal;
+        }
+        .content { display: none; padding: 15px; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; background-color: #f9f9f9; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+         th {
+            background-color: #e9e9e9; /* Lighter grey for headers */
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         li { margin-bottom: 5px; }
+         ul { margin-top: 5px; padding-left: 20px; }
+         em { font-style: italic; color: #555; } /* Style for teacher notes */
+         .time-title { color: #2196F3; margin-bottom: 20px;} /* Blue color for time title */
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+        // Initialize on page load
+        window.onload = function() {
+          // Optionally expand the first activity or 'De un Vistazo' by default
+          // toggleContent('de_un_vistazo_content');
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Taller ODS - Sesión 3: ¡La Aventura Interactiva! - Definiendo la Escena y la Acción</h1>
+    </div>
+    <div class="container">
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de Taller: 40 minutos</h2>
+
+        <!-- De un Vistazo -->
+         <div id="de-un-vistazo" class="activity" data-time="N/A">
+            <div class="banner" onclick="toggleContent('de_un_vistazo_content')">
+                <div class="title">👁️ De un Vistazo: Sesión 3</div>
+                <hr>
+                <div class="subtitle">Resumen rápido de objetivos, tácticas, entregables, materiales y preparación.</div>
+            </div>
+            <div id="de_un_vistazo_content" class="content">
+                <table>
+                    <tr style="background-color: #f9f9f9;">
+                        <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                        <th style="width: 50%;">Materiales y Preparación Previa</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Objetivos:</strong>
+                            <ul>
+                                <li><strong>Táctica 5:</strong> Visualizar y dibujar la escena "Mejor" (el resultado positivo si el Héroe actúa).</li>
+                                <li><strong>Táctica 6:</strong> Definir y dibujar la Escena Inicial clave donde ocurre la interacción (elección Héroe/Villano).</li>
+                                <li><strong>Táctica 7 (Implícita):</strong> Empezar a pensar en la secuencia lógica (Inicio -> Clic -> Resultado Bueno/Malo).</li>
+                            </ul>
+                           <strong>Tácticas Principales:</strong> ¡Planeta Feliz! (Movie Time), ¡La Escena Principal! (Storyboard Simplificado - 1 escena).
+                           <br><strong>Entregable Clave:</strong> Dibujo de la Escena "Mejor" (Final Feliz), Dibujo de la Escena Inicial (con Héroe y Villano).
+                        </td>
+                        <td>
+                           <strong>Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Diapositivas 17-21 detalladas abajo).</li>
+                                <li>Acceso a tablero Miro (o similar) o rotafolios/papel grande por equipo.</li>
+                                <li>Dibujos de la Sesión 2 (Villano, Héroe, Escena Peor).</li>
+                                <li>Hojas blancas, lápices, marcadores, colores.</li>
+                                <li>Ejemplo "¡Xolo vs. el Basuravirus!" integrado en las diapositivas.</li>
+                            </ul>
+                            <strong>Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Diapositivas 17 a 21. Preparar los ejemplos visuales de las escenas de Xolo.</li>
+                                <li><strong>Espacio de Trabajo:</strong> Asegurarse de que los equipos tengan a mano sus dibujos de la Sesión 2 y espacio para dibujar las nuevas escenas.</li>
+                                <li><strong>Materiales de Dibujo:</strong> Listos para usar.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1: Recap y Enfoque Héroe/Villano -->
+        <div id="activity-1" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🔄 Actividad 1: Recap y Enfoque Héroe/Villano ⏰ Tiempo: 3 minutos</div>
+                <hr>
+                <div class="subtitle">Recordatorio de los personajes creados y presentación del objetivo: dibujar los finales y el inicio de la acción.</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                         <th style="width: 50%;">Acción</th>
+                         <th style="width: 50%;">Diálogo Maestro</th>
+                     </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 17</strong>.
+                            <ul>
+                                <li><em>Título:</em> "¡Sesión 3: La Aventura Interactiva!"</li>
+                                <li><em>Imagen:</em> Puede ser una pantalla de videojuego simple con un botón de "Play" grande, o Xolo frente a los dos caminos (feliz/triste).</li>
+                                <li><em>Texto:</em> "¡Hoy dibujamos el final feliz y dónde empieza la acción!"</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Equipos de Héroes, bienvenidos a la Sesión 3! 👋 ¿Recuerdan a sus súper Villanos y Héroes ODS que dibujaron la sesión pasada? ¡Fueron increíbles!"
+                             <br><br>
+                            "¿Y recuerdan cómo quedaba todo de triste si ganaba el Villano, esa escena del 'Planeta en Peligro' que dibujaron? 😟"
+                            <br><br>
+                            "¡Pues hoy vamos a dibujar el final <strong>FELIZ</strong>! ✨ Y luego, dibujaremos la escena más importante de todas: ¡donde empieza la aventura y podemos <strong>ELEGIR</strong> qué hacer para ayudar al planeta! ¿Listos para la acción interactiva?"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Táctica 5: ¡Planeta Feliz! -->
+        <div id="activity-2" class="activity" data-time="15">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">😊 Actividad 2: Táctica 5: ¡Planeta Feliz! (Movie Time) ⏰ Tiempo: 15 minutos</div>
+                <hr>
+                <div class="subtitle">Los equipos visualizan y dibujan la escena "Mejor" o "Feliz" que ocurre si el Héroe actúa y gana.</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 18</strong>.
+                            <ul>
+                                <li><em>Título:</em> "¡Paso 5! ¡Planeta Feliz!"</li>
+                                <li><em>Icono:</em> Planeta feliz 😊, sol brillante ☀️, flores 🌸.</li>
+                                <li><em>Instrucción:</em> "En equipo: ¡Dibujen cómo se ve todo si gana el HÉROE! ¿Qué pasa de bueno en su escena (río limpio, árbol contento...)? ¡El final feliz!"</li>
+                            </ul>
+                             Repartir hojas y materiales de dibujo.
+                        </td>
+                        <td>
+                            "¡Ahora viene la parte más bonita! Imaginen que su Héroe usa sus poderes y... ¡PUM! 💥 ¡Derrota al Villano! ¿Cómo queda todo ahora? ¡Es el final <strong>FELIZ</strong> de nuestra película!"
+                            <br><br>
+                            "Tomen una hoja nueva. Recuerden la escena triste que dibujaron antes (el Planeta en Peligro). Ahora dibujen esa MISMA escena (el río, el bosque...) pero ¡<strong>FELIZ y LIMPIA</strong>! ¿El agua está azul brillante? ✨ ¿Hay flores coloridas? 🌷 ¿Los animales están contentos? 🐿️ ¿El aire está puro y fresco? 🌬️"
+                            <br><br>
+                            "¡Dibujen cómo se ve todo cuando su Héroe salva el día! ¡El Planeta Feliz! ¡Usen muchos colores vivos y dibujen cosas alegres!"
+                            <br><br>
+                            <em>(Dar tiempo suficiente para que dibujen la escena positiva. Animarles a usar colores vivos y elementos alegres. Es importante que sea un contraste claro con la escena "Peor").</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 19</strong> (Ejemplo Xolo - Escena Mejor).
+                            <ul>
+                                <li><em>Título:</em> "Ejemplo Táctica 5: ¡El Río Limpio y Feliz!"</li>
+                                <li><em>Imagen:</em> Mostrar el dibujo de la Escena "Mejor" de Xolo (río azul claro, sin basura, pez feliz saltando, humano consciente sonriendo, Xolo feliz).</li>
+                                <li><em>Texto:</em> "Cuando Xolo actúa, ¡el Basuravirus desaparece, el humano deja de tirar basura y el río vuelve a estar limpio y lleno de vida! ¡Este es el final BUENO!"</li>
+                            </ul>
+                         </td>
+                         <td>
+                            "Miren el ejemplo de Xolo: ¡cuando él actúa, el río queda precioso! Azul, limpio, ¡hasta el pez salta de alegría y el humano sonríe! 😄 Así es como dibujaron ellos su final feliz."
+                             <br><br>
+                            "¡Ahora dibujen ustedes el final feliz de su propia misión! ¡Que se vea súper alegre!"
+                             <br><br>
+                            <em>(Consejo Maestro: Ayúdales a contrastar claramente esta escena con la "Peor" que dibujaron antes. Deben ser opuestas visualmente).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Entregable Clave:</strong> Dibujo simple por equipo: Escena "Mejor" (resultado positivo).
+                        </td>
+                        <td><em>(Asegurarse que cada equipo tenga su dibujo de la escena feliz).</em></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Táctica 6: ¡La Escena Principal! -->
+        <div id="activity-3" class="activity" data-time="17">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                 <div class="title">🎬 Actividad 3: Táctica 6: ¡La Escena Principal! (Storyboard Simplificado - 1 escena) ⏰ Tiempo: 17 minutos</div>
+                 <hr>
+                <div class="subtitle">Los equipos definen y dibujan la escena inicial donde el jugador podrá interactuar (hacer clic) con el Héroe o el Villano.</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                <table>
+                     <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 20</strong>.
+                            <ul>
+                                 <li><em>Título:</em> "¡Paso 6! ¡La Escena Principal!"</li>
+                                 <li><em>Icono:</em> Claqueta 🎬 o pantalla de inicio de juego 🎮.</li>
+                                 <li><em>Instrucción:</em> "En equipo: ¡Dibujen la escena donde EMPIEZA TODO! ¿Cómo se ve el lugar (río, bosque...)? ¿Dónde está su HÉROE? ¿Dónde está su VILLANO? ¡Listos para que les hagan clic!"</li>
+                            </ul>
+                            Repartir hojas nuevas. Pedirles que tengan a mano sus dibujos del Héroe y Villano.
+                         </td>
+                         <td>
+                            "¡Equipos, ya tenemos los dos finales de nuestra historia! El triste 😥 y el feliz 😊. ¡Ahora necesitamos dibujar dónde empieza la aventura! La <strong>Escena Principal</strong>. ¡Esta es la pantalla donde el jugador podrá <strong>ELEGIR</strong> si hacer clic al Héroe o al Villano!"
+                             <br><br>
+                            "Tomen otra hoja. Dibujen su lugar (el río, el bosque...). ¿Cómo se ve JUSTO ANTES de que el jugador haga clic? ¿Está un poquito sucio al principio? ¿O todavía está bien?"
+                            <br><br>
+                            "Ahora, ¡pongan a su <strong>Héroe</strong> en un sitio visible de la escena! Y pongan a su <strong>Villano</strong> (o al humano/objeto que lo representa) en otro sitio visible. ¡Ambos tienen que estar ahí, listos para que el jugador les pueda hacer clic!"
+                             <br><br>
+                             "¡Esta es la pantalla más importante porque aquí es donde empieza la interacción! ¡Dibújenla con cuidado!"
+                            <br><br>
+                            <em>(Dar tiempo suficiente para que diseñen la composición de su escena inicial. Asegurarse de que ambos personajes/elementos clicables (Héroe y Villano/Problema) estén claros y presentes en el dibujo).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 21</strong> (Ejemplo Xolo - Escena Inicial).
+                            <ul>
+                                 <li><em>Título:</em> "Ejemplo Táctica 6: ¡La Escena del Río!"</li>
+                                 <li><em>Imagen:</em> Mostrar el dibujo de la Escena Inicial de Xolo (Río un poco sucio, Xolo en la orilla, Humano normal con BV-R flotando cerca, Pececito neutro). Debe quedar claro que se puede hacer clic en Xolo o en el BV-R/Humano.</li>
+                                 <li><em>Texto:</em> "Aquí empieza la historia de Xolo. El río está más o menos. ¡Puedes hacer clic en Xolo (el Héroe) o en el Basuravirus (el Villano) que está cerca del humano!"</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "Miren el ejemplo de Xolo: dibujaron el río un poco sucio. Pusieron a Xolo en la orilla y al humano con el Basuravirus cerca. ¡Están listos para que el jugador elija a quién tocar! Así dibujaron ellos su Escena Principal."
+                            <br><br>
+                            "¡Ahora dibujen la suya! ¿Dónde colocarán a su Héroe y a su Villano para que el jugador pueda empezar la aventura?"
+                            <br><br>
+                            <em>(Consejo Maestro: Es clave que esta escena contenga los dos elementos que serán clicables (Héroe y Villano/Problema) y el estado "intermedio" del entorno antes de la acción).</em>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+                            <strong>Entregable Clave:</strong> Dibujo por equipo: Escena Inicial (con Héroe y Villano interactivos).
+                         </td>
+                         <td><em>(Verificar que cada equipo tenga su dibujo de la escena inicial con ambos elementos interactivos).</em></td>
+                     </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4: Cierre de Sesión y Avance -->
+        <div id="activity-4" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">✅ Actividad 4: Cierre de Sesión y Avance ⏰ Tiempo: 5 minutos</div>
+                <hr>
+                <div class="subtitle">Resumen de logros, guardado MUY importante de TODOS los dibujos y preparación para la Sesión Final (Plan Maestro y Estreno).</div>
+            </div>
+             <div id="activity_4_content" class="content">
+                <table>
+                     <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Recoger y organizar TODOS los dibujos.
+                            <em>(No requiere diapositiva específica).</em>
+                         </td>
+                         <td>
+                            "¡Equipos de Héroes, lo han hecho genial! ¡Ya tienen casi toda su aventura dibujada! Tienen al <strong>Villano</strong>, al <strong>Héroe</strong>, el <strong>final triste</strong> (Planeta en Peligro), el <strong>final feliz</strong> (Planeta Feliz) ¡y la <strong>Escena Principal</strong> donde todo comienza!"
+                            <br><br>
+                            "¡Ahora es SÚPER importante guardar MUY BIEN estos tres dibujos clave: la <strong>Escena Principal</strong> (donde empieza todo), la <strong>Escena del Planeta en Peligro</strong> (final triste) y la <strong>Escena del Planeta Feliz</strong> (final bueno)! ¡Los vamos a necesitar TODOS en la última sesión!"
+                             <br><br>
+                            <em>(Ayudar a los equipos a recoger y guardar de forma organizada sus 3 dibujos de escenas + los 2 dibujos de personajes de la sesión anterior. Es crucial tenerlos para la sesión 4).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Anunciar próximos pasos.
+                            <em>(No requiere diapositiva específica).</em>
+                        </td>
+                        <td>
+                            "En nuestra última sesión, la Sesión 4, ¡vamos a juntar todo en nuestro <strong>Plan Maestro</strong> final, el 'T-Bar'! Veremos cómo conectar la Escena Principal con los finales Feliz y Triste usando los poderes de Scratch Jr."
+                            <br><br>
+                             "Y después... ¡prepárense para el <strong>Estreno Mundial</strong>! ¡Presentarán sus increíbles historias interactivas a todos sus compañeros!" 🤩🎬
+                            <br><br>
+                            "¡Están a un paso de completar su misión! ¡Nos vemos en la Sesión 4 para el gran final! ¡Gracias por su increíble trabajo hoy!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+   </div> <!-- Cierre del container -->
+    <script>
+        // Scripts ya incluidos
+    </script>
+</body>
+</html>
